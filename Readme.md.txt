@@ -1,4 +1,4 @@
-# 🫀 Heart Disease Prediction using Machine Learning
+#  Heart Disease Prediction using Machine Learning
 
 Predicting the presence of heart disease from clinical data using **Logistic Regression** and proper feature selection.
 
@@ -8,7 +8,7 @@ Predicting the presence of heart disease from clinical data using **Logistic Reg
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Heart disease is one of the leading causes of death worldwide. This project builds a machine learning model that can predict whether a patient is likely to have heart disease based on medical attributes.
 
@@ -18,7 +18,7 @@ Heart disease is one of the leading causes of death worldwide. This project buil
 
 ---
 
-## 🛠️ Techniques Used
+##  Techniques Used
 
 - Exploratory Data Analysis (EDA)
 - Outlier detection using boxplots
@@ -29,7 +29,7 @@ Heart disease is one of the leading causes of death worldwide. This project buil
 
 ---
 
-## 📊 Features After Selection
+##  Features After Selection
 
 After removing features with high multicollinearity, the final model used:
 
@@ -47,7 +47,7 @@ After removing features with high multicollinearity, the final model used:
 
 ---
 
-## 📈 Results
+##  Results
 
 - **Accuracy**: 80.33%
 - **Confusion Matrix**:
