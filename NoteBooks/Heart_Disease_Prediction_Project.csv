@@ -1,0 +1,365 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "e27c101e",
+   "metadata": {},
+   "source": [
+    "# Decision Tree Project 3: Heart Disease Prediction\n",
+    "\n",
+    "## Problem Statement\n",
+    "\n",
+    "Heart disease is one of the leading causes of death worldwide.  \n",
+    "Early prediction can help in timely treatment and save lives.\n",
+    "\n",
+    "**Objective:**  \n",
+    "Build a **Decision Tree Classifier** to predict whether a patient has heart disease or not based on various medical attributes.\n",
+    "\n",
+    "**Target Variable:**  \n",
+    "- `target` → 0 = No Heart Disease, 1 = Heart Disease\n",
+    "\n",
+    "**Features (Examples):**\n",
+    "- age\n",
+    "- sex\n",
+    "- cp (chest pain type)\n",
+    "- trestbps (resting blood pressure)\n",
+    "- chol (serum cholesterol)\n",
+    "- fbs (fasting blood sugar)\n",
+    "- restecg (resting electrocardiographic results)\n",
+    "- thalach (maximum heart rate achieved)\n",
+    "- exang (exercise induced angina)\n",
+    "- oldpeak\n",
+    "- slope\n",
+    "- ca\n",
+    "- thal\n",
+    "\n",
+    "This is a **binary classification** problem.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3a1e9e2f",
+   "metadata": {},
+   "source": [
+    "## Dataset Information\n",
+    "\n",
+    "You can use any of the following sources for the Heart Disease dataset:\n",
+    "\n",
+    "1. **UCI Heart Disease Dataset** (most common)\n",
+    "2. Kaggle - Heart Disease Dataset\n",
+    "3. scikit-learn compatible CSV files\n",
+    "\n",
+    "Recommended columns usually include:  \n",
+    "`age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target`\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "929ab317",
+   "metadata": {},
+   "source": [
+    "## Project Steps Overview\n",
+    "\n",
+    "1. Import required libraries  \n",
+    "2. Load the dataset  \n",
+    "3. Explore the data  \n",
+    "4. Check for missing values and handle them  \n",
+    "5. Perform basic data visualization  \n",
+    "6. Separate Features (X) and Target (y)  \n",
+    "7. Split the data into Training and Testing sets  \n",
+    "8. Create and Train the Decision Tree model  \n",
+    "9. Make Predictions  \n",
+    "10. Evaluate the Model (Accuracy, Classification Report, Confusion Matrix)  \n",
+    "11. Visualize the Decision Tree  \n",
+    "12. Feature Importance Analysis  \n",
+    "13. (Optional) Hyperparameter Tuning  \n",
+    "14. Test with a new patient example  \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "331f130f",
+   "metadata": {},
+   "source": [
+    "## Step 1: Import Required Libraries"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6713af85",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d3f7d6d5",
+   "metadata": {},
+   "source": [
+    "## Step 2: Load the Dataset"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0edad525",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: You can load a CSV file using pd.read_csv()\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "689746aa",
+   "metadata": {},
+   "source": [
+    "## Step 3: Explore the Data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c915192b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use df.head(), df.info(), df.describe(), df.shape\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b54e2547",
+   "metadata": {},
+   "source": [
+    "## Step 4: Check and Handle Missing Values"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7cd38eda",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use df.isnull().sum() and fillna() if needed\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c9c53fd6",
+   "metadata": {},
+   "source": [
+    "## Step 5: Data Visualization"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cdd65f0e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use countplot for target, histograms, correlation heatmap, etc.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "58170607",
+   "metadata": {},
+   "source": [
+    "## Step 6: Separate Features (X) and Target (y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "612d8e46",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef2ed499",
+   "metadata": {},
+   "source": [
+    "## Step 7: Split Data into Training and Testing Sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3623a46c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use train_test_split from sklearn\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2b31ef6a",
+   "metadata": {},
+   "source": [
+    "## Step 8: Create and Train the Decision Tree Model"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4928bc44",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use DecisionTreeClassifier\n",
+    "# Try different values of criterion and max_depth\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "31340a7b",
+   "metadata": {},
+   "source": [
+    "## Step 9: Make Predictions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "efaff715",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a61eb73b",
+   "metadata": {},
+   "source": [
+    "## Step 10: Evaluate the Model"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e59008f0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Calculate accuracy, print classification_report and confusion_matrix\n",
+    "# Also plot the confusion matrix using heatmap\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9073307a",
+   "metadata": {},
+   "source": [
+    "## Step 11: Visualize the Decision Tree"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "df396fb5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use plot_tree from sklearn.tree\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c50f0fdc",
+   "metadata": {},
+   "source": [
+    "## Step 12: Feature Importance Analysis"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4c4b2b8d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use model.feature_importances_ and create a bar plot\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b23c0c9c",
+   "metadata": {},
+   "source": [
+    "## Step 13: (Optional) Hyperparameter Tuning"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2c7e7e46",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Hint: Use GridSearchCV to find best criterion and max_depth\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ffcd4249",
+   "metadata": {},
+   "source": [
+    "## Step 14: Test with a New Patient Example"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e5aa4ff2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your code here\n",
+    "# Create a sample patient data and predict whether the person has heart disease\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cd1eedb3",
+   "metadata": {},
+   "source": [
+    "## Conclusion\n",
+    "\n",
+    "Write your own conclusion here after completing the project.\n",
+    "\n",
+    "### Points you can include:\n",
+    "- What accuracy did you achieve?\n",
+    "- Which features were most important?\n",
+    "- Did the model overfit or underfit?\n",
+    "- What happens when you change `max_depth` and `criterion`?\n",
+    "- Possible improvements (Random Forest, Feature Scaling, etc.)\n"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
